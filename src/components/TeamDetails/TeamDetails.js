@@ -8,6 +8,7 @@ import female from '../../images/Photo/female.png';
 import male from '../../images/Photo/male.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitterSquare, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faClock, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons';
 
 
 const TeamDetails = () => {
@@ -27,10 +28,10 @@ const TeamDetails = () => {
 
     const { strTeam, strTeamBadge, strCountry, strSport, strGender, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook, strStadiumDescription } = team;
     //console.log(team)
+
     //conditional image Male vs Female
     //testing the logic 
-    // strGender = 'FeMALe';
-    
+    // strGender = 'FeMALe';    
     const [teamBoxImage, setTeamBoxImage] = useState(male);
     //const gender;
     useEffect(() => {
@@ -64,11 +65,11 @@ const TeamDetails = () => {
                 <Row className='boxTeam'>
                     <Col >
                         <div className='boxText'>
-                            <h2>{strTeam}</h2>
-                            <p>Founded: {intFormedYear}</p>
-                            <p>Country: {strCountry}</p>
-                            <p>Sport Type: {strSport}</p>
-                            <p>Gender: {strGender}</p>
+                            <h1>{strTeam}</h1>
+                            <p><FontAwesomeIcon icon={faClock} size='lg'/> Founded: {intFormedYear}</p>
+                            <p><FontAwesomeIcon icon={faFlag} size='lg' rotation=''/> Country: {strCountry}</p>
+                            <p><FontAwesomeIcon icon={faFutbol} size='lg'/> Sport Type: {strSport}</p>
+                            <p><FontAwesomeIcon icon={faMars} size='lg'/> Gender: {strGender}</p>
                         </div>
                     </Col>
                     <Col>
