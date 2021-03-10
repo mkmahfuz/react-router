@@ -1,0 +1,23 @@
+.boxTeam{
+    border: 1px solid white;
+    border-radius: 1.5rem;
+    background-color: orangered;
+    padding: 1rem;
+    
+}
+.boxText{
+    padding: 2rem;
+    color: white;
+}
+.boxImage{
+    padding: 1rem;
+    float:right;
+}
+.boxImage img{
+    width:25rem;
+    object-fit: contain;
+}
+.description{
+    margin-top: 2rem;
+    text-align: justify;
+}
