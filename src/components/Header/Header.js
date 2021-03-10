@@ -1,14 +1,15 @@
 import React from 'react';
-
-const Header = () => {
-    const headerStyle = {
-        border: '1px solid lightgray',
-    };
+// import logo from '../../images/Logo/premierLogo3.jpg';
+import './Header.css';
+const Header = (props) => {
+    // console.log(props.logo)
+    const logo = props.logo;    
     return (
-        <div style={headerStyle}>
-            <h1>This is header</h1>
-            <p>EPL Header Image will be here</p>
-        </div>
+        <header className='header'>
+            <img src={logo} alt=""/>
+            {/* <Navigation></Navigation> */}
+           
+        </header>
     );
 };
 

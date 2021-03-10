@@ -1,13 +1,13 @@
 import React from 'react';
-
+import './Footer.css';
 const Footer = () => {
-    const footerStyle = {
-        border: '1px solid lightgray',
-    };
+    
     return (
-        <div style={footerStyle}>
-            <h1>This is footer</h1>
-        </div>
+        
+            <footer className='footer'>
+           <p>All rights reserved &copy; Hero3 Soccer Group - 2021</p>
+        </footer>
+        
     );
 };
 
