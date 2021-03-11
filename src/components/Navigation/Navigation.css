@@ -1,4 +1,9 @@
+.navLink {
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 1rem
+}
 .navLink a{
-    color:white;
-    
+    color:white;  
+    padding-right: 1rem;  
 }

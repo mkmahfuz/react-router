@@ -2,26 +2,48 @@
     border: 1px solid white;
     border-radius: 1.5rem;
     background-color: orangered;
-    margin-top: 1rem;
-    /* padding: 1rem;     */
-    /* background-clip: content-box; */
+    margin-top: .5rem;
+    padding: 1rem;    
+    background-clip: content-box;
 }
 .boxText{
     padding: 1rem;
     color: white;
 }
+.boxText h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
 .boxImage{
     padding: 1rem;
-    float:right;
+    /* float:right; */
 }
 .boxImage img{
     width:25rem;
     object-fit: contain;
 }
 .description{
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: justify;
 }
 .brand-icon{
     padding: 1rem;
+}
+
+@media only screen and (max-width: 768px){
+    .boxText{
+        /* text-align: center; */
+        padding: 1rem;
+        color: white;
+        font-size:1.5rem;
+    }
+    .boxImage img{
+        width:80vw;
+        object-fit: contain;
+    }
+    .boxTeam{
+        padding: .5rem;    
+        background-clip: content-box;
+    }
 }

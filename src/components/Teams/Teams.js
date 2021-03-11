@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CardColumns, Col, Container, Row } from 'react-bootstrap';
 import Team from '../Team/Team';
+import './Teams.css'
 
 const Teams = () => {
     const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League';

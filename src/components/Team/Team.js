@@ -4,6 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import { useHistory} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import './Team.css';
 
 const Team = (props) => {
     const {idTeam,strTeam,strTeamBadge,strSport} = props.team;
@@ -15,7 +16,8 @@ const Team = (props) => {
         };
     return (
                    
-            <Card style={{ width: '18rem' }} className='text-center my-3 p-3' bg='light'>
+            // <Card style={{ width: '18rem' }} className='text-center my-3 p-3' bg='light'>
+           <Card className='teamCard1'> 
                 <Card.Img variant="top" src={strTeamBadge} />
                 <Card.Body>
                     <Card.Title>{strTeam}</Card.Title>
@@ -24,7 +26,7 @@ const Team = (props) => {
                     </Card.Text>
                                         
                     {/* <Button variant="primary"><Link to={'/team/'+idTeam}>Explore<span style={{ margin: '10px' }}></span><FontAwesomeIcon icon={faUsers}></FontAwesomeIcon></Link></Button> */}
-                    <Button variant="primary" onClick={() => handleClick(idTeam)}>Explore<span style={{ margin: '10px' }}></span><FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></Button>
+                    <Button variant="primary" onClick={() => handleClick(idTeam)}>Explore<span style={{ margin: '10px' }}></span><FontAwesomeIcon icon={faArrowRight}/></Button>
                 </Card.Body>
             </Card>
         

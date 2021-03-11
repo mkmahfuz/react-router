@@ -9,8 +9,7 @@ const headerText = 'English Premier League';
 const Home = () => {
     return (
         <div>
-            <Header logo={logo} bgImage={bgImage} headerText={headerText}></Header>
-           
+            <Header logo={logo} bgImage={bgImage} headerText={headerText}></Header>           
            <Teams></Teams>
            <Footer></Footer>
         </div>

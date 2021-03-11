@@ -4,27 +4,28 @@ import Navigation from '../Navigation/Navigation';
 import './Header.css';
 const Header = (props) => {
     // console.log(props.logo)
-    const {logo,bgImage,headerText,navigation} = props;    
+    const { logo, bgImage, headerText, navigation } = props;
     const headerStyle = {
         // background: `url(${bgImage})`,
-        backgroundImage: 'url('+bgImage+')',
-        backgroundRepeat : 'no-repeat',
+        backgroundImage: 'url(' + bgImage + ')',
+        backgroundRepeat: 'no-repeat',
     }
     const headerTextArray = headerText.split('');
     return (
         <header className='header' style={headerStyle}>
-            <img src={logo} alt="logo"/>
+            {
+                navigation && <Navigation></Navigation>
+            }
+            <img src={logo} alt="logo" />
             {/* <Navigation></Navigation> */}
-          {/* <div className='headerText'> {headerText} </div> */}
-          <div className='headerText'>
-               {
-                   headerTextArray.map((letter,idx)=><span key={idx}>{letter}</span>)               
-               } 
-          </div>
-          {
-              navigation && <Navigation></Navigation>
-          }
-          
+            {/* <div className='headerText'> {headerText} </div> */}
+            <div className='headerText'>
+                {
+                    headerTextArray.map((letter, idx) => <span key={idx}>{letter}</span>)
+                }
+            </div>
+
+
         </header>
     );
 };
