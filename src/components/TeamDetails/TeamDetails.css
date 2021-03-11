@@ -2,15 +2,16 @@
     border: 1px solid white;
     border-radius: 1.5rem;
     background-color: orangered;
-    padding: 1rem;
-    
+    margin-top: 1rem;
+    /* padding: 1rem;     */
+    /* background-clip: content-box; */
 }
 .boxText{
-    padding: 2rem;
+    padding: 1rem;
     color: white;
 }
 .boxImage{
-    padding: 2rem;
+    padding: 1rem;
     float:right;
 }
 .boxImage img{
@@ -20,4 +21,7 @@
 .description{
     margin-top: 2rem;
     text-align: justify;
+}
+.brand-icon{
+    padding: 1rem;
 }

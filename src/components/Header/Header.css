@@ -1,12 +1,28 @@
 .header{   
     text-align: center;   
-    padding-top: 2.5rem;
+    padding-top:3rem;
     
     color: wheat;
-    background: url('../../images/Background/stadium.jpg') no-repeat;
+    /* background: url('../../images/Background/stadium.jpg') no-repeat; */
     background-size: 100% 100%;
-    height: 18rem;
+    /* background-size: cover; */
+    height: 22rem;
+    
 }
 .header img{
 height: 12rem;
+}
+.headerText{
+    max-width: 60%;
+    color: red;    
+    display: flex;
+    flex-direction: row;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: space-between;
+    margin-top: 1rem; 
+    font-size: 2rem;    
+}
+.navigation{
+color:red;
 }

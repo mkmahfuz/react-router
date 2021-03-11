@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { Link, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './TeamDetails.css';
@@ -26,7 +26,7 @@ const TeamDetails = () => {
     }, [id]);
 
 
-    const { strTeam, strTeamBadge, strCountry, strSport, strGender, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook, strStadiumDescription } = team;
+    const { strTeam, strTeamBadge, strCountry, strSport, strGender, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook, strStadiumDescription ,strTeamLogo,strTeamBanner,strStadiumThumb} = team;
     //console.log(team)
 
     //conditional image Male vs Female
@@ -42,23 +42,25 @@ const TeamDetails = () => {
         }
     }, [strGender]);
     //console.log(teamBoxImage);
-    
+
     return (
 
-        <div>
-            <Header logo={strTeamBadge}></Header>
+        <>
+            <Header logo={strTeamBadge} bgImage={strStadiumThumb} navigation={true} headerText={strTeam?strTeam:''}> </Header>
 
-            <Link to='/home'>BacktoHome</Link>
-            <a href='http://ppp'>Home</a>
+            {/* <Link to='/home'>Home</Link> */}
+            
             {
                 //TODO
             }
 
             {
-                // console.log(team)
+                console.log(strTeam)
             }
 
-            {/* <div>Banner will be here: <img src={strTeamBanner} alt='banner'></img></div> */}
+            {/* <div>Banner will be here: <img src={strTeamBanner} alt='banner'></img></div>
+            <div>Logo will be here: <img src={strTeamLogo} alt='banner'></img></div>
+            <div>Stadium will be here: <img src={strStadiumThumb} alt='banner'></img></div> */}
             {/* <h2>TeamBadge: {strTeamBadge}</h2> */}
             {/* <p>Stadium: <img src={strStadiumThumb} alt='stadium'></img></p> */}
             <Container>
@@ -66,10 +68,10 @@ const TeamDetails = () => {
                     <Col >
                         <div className='boxText'>
                             <h1>{strTeam}</h1>
-                            <p><FontAwesomeIcon icon={faClock} size='lg'/> Founded: {intFormedYear}</p>
-                            <p><FontAwesomeIcon icon={faFlag} size='lg' rotation=''/> Country: {strCountry}</p>
-                            <p><FontAwesomeIcon icon={faFutbol} size='lg'/> Sport Type: {strSport}</p>
-                            <p><FontAwesomeIcon icon={faMars} size='lg'/> Gender: {strGender}</p>
+                            <p><FontAwesomeIcon icon={faClock} size='lg' /> Founded: {intFormedYear}</p>
+                            <p><FontAwesomeIcon icon={faFlag} size='lg' /> Country: {strCountry}</p>
+                            <p><FontAwesomeIcon icon={faFutbol} size='lg' /> Sport Type: {strSport}</p>
+                            <p><FontAwesomeIcon icon={faMars} size='lg' /> Gender: {strGender}</p>
                         </div>
                     </Col>
                     <Col>
@@ -77,40 +79,25 @@ const TeamDetails = () => {
                             <Image src={teamBoxImage} ></Image>
                         </div>
                     </Col>
-
                 </Row>
                 <Row >
                     <Col>
-
                         <p className='description'>{strDescriptionEN}</p>
                         <p className='description'>{strStadiumDescription}</p>
                     </Col>
-
                 </Row>
-                <Row className=" brand-icon text-center">
-                    <Col>
-                        <Link to={strFacebook}><FontAwesomeIcon icon={faFacebook} size='2x' color='#3b5998' ></FontAwesomeIcon></Link>
-                    </Col>
+                <Row className="text-center mb-5">
 
-                    <Link to='jj'>kk</Link>
                     <Col>
-                        <FontAwesomeIcon icon={faTwitterSquare} size='2x' color="skyblue" /><Link to={strTwitter}></Link>
+                        <a className='brand-icon' href={'http://' + strTwitter} rel ='noreferrer' target='_blank'> <FontAwesomeIcon icon={faTwitterSquare} size='3x' color="skyblue" /></a>
+                        <a className='brand-icon' href={'http://' + strFacebook} rel ='noreferrer' target='_blank'><FontAwesomeIcon icon={faFacebook} size='3x' color='#3b5998' ></FontAwesomeIcon></a>
+                        <a className='brand-icon' href={'http://' + strYoutube} rel ='noreferrer' target='_blank'><FontAwesomeIcon icon={faYoutube} size='3x' color="red" /></a>
                     </Col>
-                    <Col>
-                        <FontAwesomeIcon icon={faYoutube} size='2x' color="red" /><Link to={strYoutube}></Link>
-                    </Col>
-
                 </Row>
-                <div className="">
-
-                </div>
-
-
-
 
             </Container>
             <Footer></Footer>
-        </div>
+        </>
     );
 };
 
