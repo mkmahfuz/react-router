@@ -1,10 +1,9 @@
 
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import TeamDetails from "./components/TeamDetails/TeamDetails";
-
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
           <Home></Home>
         </Route>
         <Route path='/about'>
-         <About></About>
+          <About></About>
         </Route>
         <Route path='/team/:id'>
           <TeamDetails></TeamDetails>

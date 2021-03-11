@@ -23,9 +23,9 @@ const TeamDetails = () => {
     }, [id]);
 
     //destructuring the team object
-    const { strTeam, strTeamBadge, strCountry, strSport, strGender, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook, strStadiumDescription, strTeamLogo, strTeamBanner, strStadiumThumb } = team;
+    const { strTeam, strTeamBadge, strCountry, strSport, strGender, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook, strStadiumDescription, strStadiumThumb } = team;
 
-    //conditional rendering of Male vs Female Image     
+    //conditional rendering of Male vs Female Image  using state and effect hook   
     const [teamBoxImage, setTeamBoxImage] = useState(male);
     useEffect(() => {
         if (strGender) {
@@ -36,15 +36,11 @@ const TeamDetails = () => {
 
 
     return (
-
         <>
             <Header logo={strTeamBadge} bgImage={strStadiumThumb} navigation={true} headerText={strTeam ? strTeam : ''}> </Header>
-            {
-                // console.log(strTeam)
-            }
             <Container>
                 <Row className='boxTeam'>
-                    <Col  sm={7} >
+                    <Col sm={7} >
                         <div className='boxText'>
                             <h1>{strTeam}</h1>
                             <p><FontAwesomeIcon icon={faClock} size='lg' /> Founded: {intFormedYear}</p>

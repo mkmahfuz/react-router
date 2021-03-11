@@ -5,7 +5,6 @@ import './Teams.css'
 
 const Teams = () => {
     const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League';
-    // const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=England';
     const [teams, setTeams] = useState([]);
     useEffect(() => {
         fetch(url)
@@ -15,19 +14,16 @@ const Teams = () => {
     return (
         //using bootstrap
         <Container>
-        <Row>
-            <Col >
-                <CardColumns>
-                {
-                    // console.log(teams)
-                    teams.map((team) => <Team key={team.idTeam} team={team}></Team>)
-                }
-                </CardColumns>
-            </Col>
-        </Row>
+            <Row>
+                <Col >
+                    <CardColumns>
+                        {
+                            teams.map((team) => <Team key={team.idTeam} team={team}></Team>)
+                        }
+                    </CardColumns>
+                </Col>
+            </Row>
         </Container>
-
-
     );
 };
 
